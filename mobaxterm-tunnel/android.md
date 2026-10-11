@@ -22,6 +22,25 @@ SocksDroid, work as a VPN, and Android allows only one VPN at a time, so they
 cannot run next to GlobalProtect. The Wi-Fi proxy setting of Android takes only
 HTTP proxies and is per network, so it does not help either.
 
+## 0. Already using the "Mobaxterm SSH" app from Google Play?
+
+That app (package `com.csgroup.ssh`, developer "A389 St") is not made by
+Mobatek, the company behind the Windows MobaXterm. Mobatek publishes Windows
+software only. The Play Store app borrows the name, shows ads, and its store
+page lists SSH, X11, RDP, VNC and Telnet plus "tunnel networking", without
+saying which tunnel types it offers.
+
+Check it before installing anything else: long-press your saved server in its
+host list and look for an entry such as **Edit port forwards** or **Tunnels**.
+If it lets you add a forward of type **Dynamic (SOCKS)** with source port
+`1080`, use that and skip to Part 2. If it offers only local forwards, Part 4
+works with it. If it has no port forwarding at all, install ConnectBot as
+described next. Both apps can stay installed side by side.
+
+One thing to weigh: your university password goes into that app, and its
+code is closed and its publisher unknown. ConnectBot and Termux are open
+source, which is why this guide uses ConnectBot.
+
 ## 1. The tunnel: ConnectBot
 
 ConnectBot is free and open source, on Google Play and F-Droid. Termius also
