@@ -14,7 +14,8 @@ Files in this folder:
 | File | Purpose |
 | --- | --- |
 | `chrome-via-server.cmd` | Starts Chrome through the tunnel. Copy it to your Desktop. |
-| `README.md` | This guide. |
+| `README.md` | This guide (Windows PC). |
+| `android.md` | The same setup from an Android phone or tablet. |
 
 ## 1. One-time setup in MobaXterm
 
